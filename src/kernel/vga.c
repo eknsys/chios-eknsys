@@ -24,3 +24,4 @@ void vga_draw_chi(const char *s, uint8_t c) {
     vga_write_at(0, 0, "=^-^=", 0x30);
     vga_write_at(8, 0, s, c);
 }
+

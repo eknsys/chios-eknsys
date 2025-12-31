@@ -1,6 +1,7 @@
 #include "app.h"
 #include "vga.h"
 #include "p_about.h"
+#include "p_settings.h"
 #include "ui_button.h"
 #include "ui_input.h"
 
@@ -21,6 +22,9 @@ void mainapp() {
 
     ui_button_draw(4, 11, "Info", 0x1E);
     ui_button_add(4, 11, "Info", startProgramAbout);
+
+    ui_button_draw(11, 11, "Einstellungen", 0x1E);
+    ui_button_add(11, 11, "Einstellungen", startProgramSettings);
 
 
 }

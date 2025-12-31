@@ -4,7 +4,12 @@
 #include "keyboard.h"
 #include "ui_input.h"
 #include "ui_button.h"
+#include "util.h"
 #include "app.h"
+
+
+uint8_t mousecolor = 0x6C;
+
 
 char *sysver = "1.0dev1.0";
 
