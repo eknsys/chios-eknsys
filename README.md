@@ -23,6 +23,7 @@ ChiOS selbst steht unter der MIT-Lizenz und ist unabhängig von den Lizenzen der
 ## Installation
 
 ChiOS verfügt nicht über ein Setup. Zum Starten muss die *.iso Datei unter releases heruntergeladen werden. Diese muss dann bootfähig auf einen USB-Stick geschrieben werden (ChiOS liefert kein eigenes Tool dafür!).
+ChiOS funktioniert nicht auf jeder Hardware perfekt. Eingeschränkt auf echter Hardware ist vorallem die notwendige Mausfunktion. Wenn dies der Fall ist, benutzen Sie ChiOS in einer VM.
 
 ### Linux
 
