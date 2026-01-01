@@ -1,7 +1,7 @@
 #include "ui_button.h"
 #include "vga.h"
 
-#define MAX_BUTTONS 10
+#define MAX_BUTTONS 9999
 
 static Button buttons[MAX_BUTTONS];
 static int button_count = 0;

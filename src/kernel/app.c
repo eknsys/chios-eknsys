@@ -6,16 +6,19 @@
 #include "ui_input.h"
 
 extern char *sysver;
+extern uint8_t fontcolor;
 
 
-void mainapp() {
-    vga_clear(0x1F);
+void mainapp(char *chistr) {
+
+
+    vga_clear(fontcolor);
 
     vga_draw_chi("Miau! Suche dir mal ein Programm aus!", 0x30);
 
     vga_write_at(2, 6, "ChiOS - mainapp - Main Menu", 0x1B);
 
-    vga_write_at(2, 9, "System Apps:", 0x1F);
+    vga_write_at(2, 9, "System Apps:", fontcolor);
 
     ui_button_init();
     ui_input_init();

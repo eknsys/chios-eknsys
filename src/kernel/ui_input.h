@@ -9,6 +9,7 @@ typedef struct {
     int focused;
 } InputField;
 
+static void draw_input(InputField *in);
 void ui_input_init();
 void ui_input_add(int x, int y, int w);
 void ui_input_draw_all();

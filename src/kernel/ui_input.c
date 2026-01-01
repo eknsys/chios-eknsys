@@ -2,7 +2,7 @@
 #include "vga.h"
 #include "keyboard.h"
 
-#define MAX_INPUTS 10
+#define MAX_INPUTS 9999
 
 static InputField inputs[MAX_INPUTS];
 static int input_count = 0;

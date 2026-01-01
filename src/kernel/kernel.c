@@ -9,6 +9,7 @@
 
 
 uint8_t mousecolor = 0x6C;
+uint8_t fontcolor = 0x1F;
 
 
 char *sysver = "1.0dev1.0";
@@ -18,7 +19,7 @@ void kernel_main(uint32_t magic, void *mb_info) {
     (void)mb_info;
 
     vga_clear(0x1F);
-    vga_write_at(1, 1, "Loading mainapp...", 0x1F);
+    vga_write_at(1, 1, "Loading mainapp...", fontcolor);
 
     ui_input_init();
     ui_button_init();
