@@ -12,7 +12,7 @@ uint8_t mousecolor = 0x6C;
 uint8_t fontcolor = 0x1F;
 
 
-char *sysver = "1.0dev1.0";
+char *sysver = "chiver1.0";
 
 void kernel_main(uint32_t magic, void *mb_info) {
     (void)magic;
