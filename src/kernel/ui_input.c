@@ -55,7 +55,7 @@ static void handle_char(InputField *in, char c) {
     if (c == '\b') {
         if (in->len > 0) {
             in->len--;
-            in->buffer[in->len] = '\0';   // wichtig: String korrekt beenden
+            in->buffer[in->len] = '\0';
         }
     } else if (c >= 32 && c <= 126) {
         if (in->len < in->w && in->len < 127) {
@@ -71,9 +71,9 @@ void ui_input_handle() {
     if (!c) return;
 
     for (int i = 0; i < input_count; i++) {
-        InputField *in = &inputs[i];
-        if (!in->focused) continue;
-        handle_char(in, c);
+        if (inputs[i].focused) {
+            handle_char(&inputs[i], c);
+        }
     }
 }
 

@@ -2,7 +2,7 @@ CC = gcc
 LD = ld
 CFLAGS = -m32 -ffreestanding -O2 -Wall -Wextra
 
-OBJS = boot.o kernel.o mouse.o keyboard.o vga.o ui_input.o ui_button.o util.o p_about.o p_settings.o app.o
+OBJS = boot.o kernel.o mouse.o keyboard.o vga.o port_io.o ui_input.o ui_button.o util.o p_about.o p_settings.o p_chisay.o app.o
 
 all: kernel.bin iso
 
@@ -18,6 +18,9 @@ keyboard.o: kernel/keyboard.c
 vga.o: kernel/vga.c
 	$(CC) $(CFLAGS) -c kernel/vga.c -o vga.o
 
+port_io.o: kernel/port_io.c
+	$(CC) $(CFLAGS) -c kernel/port_io.c -o port_io.o
+
 ui_input.o: kernel/ui_input.c
 	$(CC) $(CFLAGS) -c kernel/ui_input.c -o ui_input.o
 
@@ -32,6 +35,9 @@ p_about.o: kernel/p_about.c
 
 p_settings.o: kernel/p_settings.c
 	$(CC) $(CFLAGS) -c kernel/p_settings.c -o p_settings.o
+
+p_chisay.o: kernel/p_chisay.c
+	$(CC) $(CFLAGS) -c kernel/p_chisay.c -o p_chisay.o
 
 app.o: kernel/app.c
 	$(CC) $(CFLAGS) -c kernel/app.c -o app.o

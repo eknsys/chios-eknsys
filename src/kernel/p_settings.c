@@ -10,12 +10,12 @@ extern uint8_t fontcolor;
 
 void startProgramSettings();
 
-void btnSetMouse() {
+void psetSetMouse() {
     mousecolor = to_uint8_t(ui_input_get_buffer(0));
     mainapp();
 }
 
-void btnSetTH() {
+void psetSetTH() {
     fontcolor = to_uint8_t(ui_input_get_buffer(1));
     vga_clear(fontcolor);
     mainapp();
@@ -26,6 +26,7 @@ void startProgramSettings() {
     vga_draw_chi("Du willst etwas aendern? Vielleicht die...  ...Maus...  ...MAUS! WO? WO? MEIN MITTAGESSEN!", 0x30);
 
     ui_button_init();
+    ui_input_init();
 
 
     vga_write_at(2, 6, "ChiOS System App - Einstellungen", 0x13);
@@ -36,7 +37,7 @@ void startProgramSettings() {
     ui_input_add(10, 9, 10);
     
     ui_button_draw(2, 11, "Mauszeiger Ok", 0x1E);
-    ui_button_add(2, 11, "Mauszeiger Ok", btnSetMouse);
+    ui_button_add(2, 11, "Mauszeiger Ok", psetSetMouse);
 
 
     vga_write_at(2, 14, "Text + Hintergrundfarbe: hex 0xHV, (z.b. 0x1f, 0x0f)", fontcolor);
@@ -46,7 +47,7 @@ void startProgramSettings() {
     ui_input_add(10, 16, 10);
 
     ui_button_draw(2, 18, "T/H Farben Ok", 0x1E);
-    ui_button_add(2, 18, "T/H Farben Ok", btnSetTH);
+    ui_button_add(2, 18, "T/H Farben Ok", psetSetTH);
 
     ui_input_draw_all();
 

@@ -25,3 +25,10 @@ void vga_draw_chi(const char *s, uint8_t c) {
     vga_write_at(8, 0, s, c);
 }
 
+void vga_clear_at(int y, int rows, uint8_t color) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < 79; j++) {
+            vga_write_at(j, i + y, " ", color);
+        }
+    }
+}

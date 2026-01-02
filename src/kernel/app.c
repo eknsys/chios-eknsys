@@ -2,6 +2,7 @@
 #include "vga.h"
 #include "p_about.h"
 #include "p_settings.h"
+#include "p_chisay.h"
 #include "ui_button.h"
 #include "ui_input.h"
 
@@ -28,6 +29,11 @@ void mainapp(char *chistr) {
 
     ui_button_draw(11, 11, "Einstellungen", 0x1E);
     ui_button_add(11, 11, "Einstellungen", startProgramSettings);
+
+    vga_write_at(4, 14, "Chi Apps:", fontcolor);
+
+    ui_button_draw(4, 16, "Chi Say", 0x1E);
+    ui_button_add(4, 16, "Chi Say", startProgramChiSay);
 
 
 }
